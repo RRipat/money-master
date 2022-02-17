@@ -3,13 +3,13 @@
     inpute for function items
 -------------------------------------*/
 function getValue(nameOf){
-    const previousValue = document.getElementById(nameOf);
-    const newValue = parseFloat(previousValue.value);
+    const previousInputValue = document.getElementById(nameOf);
+    const newValue = parseFloat(previousInputValue.value);
     return newValue; 
 }
 function getInnerText(nameOf){
-    const previousValue = document.getElementById(nameOf);
-    const newValue = parseFloat(previousValue.innerText);
+    const previousInputValue = document.getElementById(nameOf);
+    const newValue = parseFloat(previousInputValue.innerText);
     return newValue; 
 }
 
