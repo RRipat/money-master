@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css link -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- link tailwindcss -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>5th assignment</title>
+</head>
+<body>
+
+    <!------------
+        header
+    ------------->
+    <header>
+        <h1 class="text-4xl font-bold secondary-color text-center mt-5">Money Bank</h1>
+    </header>
+
+    <!-----------------
+        main section
+    ------------------>
+    <main>
+        <section class="grid grid-cols-1 lg:grid-cols-2 mt-10">
+            <div class="w-10/12 mx-auto mb-10 lg:mb-0">
+                <img class="rounded" src="money.jpg" alt="money picture">
+            </div>
+            <div class="w-5/6 mx-auto bg-gray-100 rounded">
+                <div class="mt-10 w-4/6 mx-auto ">
+
+                    <!----------------------------
+                         income and cost area
+                    ----------------------------->
+                    <h4 class="text-xl font-bold text-center">Income</h4>
+                    <h3 class="inline-block mt-5">Income:</h3>
+                    <input class="py-2 pl-2 rounded bg-gray-300" value="0" type="number" name="" id="total-income">
+                    <p id="error-income" class="text-center text-red-600 error">please type your valid income</p>
+                    <h4 class="text-xl font-bold text-center mt-5">Expenses</h4>
+                    <h3 class="inline-block mt-5 mr-5">Food:</h3>
+                    <input class="py-2 pl-2 rounded bg-gray-300" value="0" type="number" name="" id="food-cost"><br>
+                    <p id="error-food" class="text-center text-red-600 error">please type a valid food cost</p>
+                    <h3 class="inline-block mt-5 mr-6 mt-7">Rent:</h3>
+                    <input class="py-2 pl-2 rounded bg-gray-300" value="0" type="number" name="" id="rent-cost"><br>
+                    <p id="error-rent" class="text-center text-red-600 error">please type a valid rent cost</p>
+                    <h3 class="inline-block mt-5 mt-7">Clothes:</h3>
+                    <input class="py-2 pl-2 rounded bg-gray-300" value="0" type="number" name="" id="cloth-cost">
+                    <p id="error-cloth" class="text-center text-red-600 error">please type a valid cloth cost</p>
+
+                    <!----------------------
+                         Calculate button
+                    ----------------------->
+                    <button id="calculate-btn" class="py-2 px-7 rounded-lg lg:ml-36 ml-0 mt-5 text-white hover:bg-blue-700 btn" >Calculate</button>
+                    
+                    <!---------------------
+                         total Expanses
+                    ---------------------->
+                    <h2 class="text-xl font-bold text-center mt-5">Total Expenses : <span id="total-expanses" class="secondary-color">00</span></h2>
+                    <p id="error-expanses" class="text-center text-red-600 error">please Increase your income</p>
+                    <h2 class="text-xl font-bold text-center mt-5">Balance : <span id="balance" class="secondary-color">00</span></h2>
+
+                    <!---------------------
+                        saving area
+                    --------------------->
+                    <h3 class="inline-block mt-5 mt-10">Save:</h3>
+                    <input class="py-2 pl-2 rounded bg-gray-300 lg:w-2/6 w-1/5" type="number" name="" id="saving-input"><h2 class="inline-block text-xl font-bold mx-2">%</h2>
+                    <button id="save-btn" class="py-2 lg:px-5 px-4 rounded-lg mt-5 text-white hover:bg-blue-700 btn" >Save</button>
+                    <p id="error-save" class="text-center text-red-600 error">please type a valid percentage Number</p>
+                    <h3 class="text-xl font-bold text-center mt-5">Saving Amount : <span id="saving-amount" class="secondary-color">00</span></h3>
+                    <p id="error-saveing-amount" class="text-center text-red-600 error">You do not have enough money to save</p>
+                    <h3 class="text-xl font-bold text-center mt-5 pb-2 md:pb-0">Remaining Balance : <span id="remaining-balance" class="secondary-color">00</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- footer -->
+    <footer class="my-10">
+        <p class="text-center opacity-50">Copyright © 2022 money bank.com</p>
+    </footer>
+
+    <script src="js/caltulate.js"></script>
+</body>
+</html>
+cdn.tailwindcss.com
+cdn.tailwindcss.com
+cdn.tailwindcss.com
+cdn.tailwindcss.com
+
