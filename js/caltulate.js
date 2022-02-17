@@ -1,6 +1,6 @@
 
 /*-------------------------------------
-    inpute for function
+    inpute for function items
 -------------------------------------*/
 function getValue(nameOf){
     const previousValue = document.getElementById(nameOf);
@@ -15,7 +15,7 @@ function getInnerText(nameOf){
 
 
 /*-----------------------
-    total Expenses
+    total Expenses items
 ------------------------*/
 function totalExpenses(){
     const foodCostValue = getValue("food");
