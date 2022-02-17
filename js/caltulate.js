@@ -18,15 +18,15 @@ function getInnerText(nameOf){
     total Expenses items
 ------------------------*/
 function totalExpenses(){
-    const foodCostValue = getValue("food");
-    const rentCostValue = getValue("rent");
-    const clothCostValue = getValue("cloth");
+    const foodValue = getValue("food");
+    const rentValue = getValue("rent");
+    const clothValue = getValue("cloth");
     const totalExpanses = document.getElementById("total-expences");
     const income = getValue("income-total");
-    const newTotalExpanses = foodCostValue + rentCostValue + clothCostValue;
+    const newTotalExpanses = foodValue + rentValue + clothValue;
     
     if(newTotalExpanses < income){
-        const totalExpansesValue = totalExpanses.innerText = parseFloat(foodCostValue) + parseFloat(rentCostValue) + parseFloat(clothCostValue);
+        const totalExpansesValue = totalExpanses.innerText = parseFloat(foodValue) + parseFloat(rentValue) + parseFloat(clothValue);
         document.getElementById("error-expanses").style.display = "none";
         return totalExpansesValue;
     }
