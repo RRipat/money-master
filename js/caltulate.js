@@ -2,12 +2,12 @@
 /*-------------------------------------
     inpute for function items
 -------------------------------------*/
-function getValue(nameOf){
+function gateToValue(nameOf){
     const previousInputValue = document.getElementById(nameOf);
     const newValue = parseFloat(previousInputValue.value);
     return newValue; 
 }
-function getInnerText(nameOf){
+function getText(nameOf){
     const previousInputValue = document.getElementById(nameOf);
     const newValue = parseFloat(previousInputValue.innerText);
     return newValue; 
@@ -17,12 +17,12 @@ function getInnerText(nameOf){
 /*-----------------------
     total Expenses items
 ------------------------*/
-function totalExpenses(){
-    const foodValue = getValue("food");
-    const rentValue = getValue("rent");
-    const clothValue = getValue("cloth");
+function expencesTotal(){
+    const foodValue = gateToValue("food");
+    const rentValue = gateToValue("rent");
+    const clothValue = gateToValue("cloth");
     const totalExpanses = document.getElementById("total-expences");
-    const income = getValue("income-total");
+    const income = gateToValue("income-total");
     const newTotalExpanses = foodValue + rentValue + clothValue;
     
     if(newTotalExpanses < income){
@@ -39,8 +39,8 @@ function totalExpenses(){
      balance
 ------------------*/
 function balance(){
-const totalIncomeValue = getValue("income-total");
-const totalExpanses = parseFloat(totalExpenses());
+const totalIncomeValue = gateToValue("income-total");
+const totalExpanses = parseFloat(expencesTotal());
 const balance = document.getElementById("balance");
 const balanceValue = balance.innerText = totalIncomeValue - totalExpanses;
 return balanceValue;
@@ -50,9 +50,9 @@ return balanceValue;
    total saving
 -----------------*/
 function totalSaving(){
-    const totalIncomeValue =getValue("income-total");
-    const savingInputValue = getValue("saving-input");
-    const totalBalance = getInnerText("balance");
+    const totalIncomeValue =gateToValue("income-total");
+    const savingInputValue = gateToValue("saving-input");
+    const totalBalance = getText("balance");
     const savingAmount = document.getElementById("saving-amount");
     const newSavingAmount = (totalIncomeValue / 100) * savingInputValue;
 
@@ -71,8 +71,8 @@ function totalSaving(){
     remaining Balance
 -------------------------*/
 function forRemaningBalance(){
-  const balance =  getInnerText("balance");
-  const savingAmount = getInnerText("saving-amount");
+  const balance =  getText("balance");
+  const savingAmount = getText("saving-amount");
   const remainingBalance = document.getElementById("remaining-balance");
   remainingBalance.innerText = balance - savingAmount;
 }
@@ -94,7 +94,7 @@ function errorRemove(removeError){
     call for calculate
 --------------------------*/
 document.getElementById("calc-btn").addEventListener("click",function(){
-    totalExpenses();
+    expencesTotal();
     balance();
 })
 
@@ -108,7 +108,7 @@ document.getElementById("save-button").addEventListener("click",function(){
 
 /* income Error area */
 document.getElementById("income-total").addEventListener("keyup",function(){
-    const totalValue = getValue("income-total");
+    const totalValue = gateToValue("income-total");
     
     if(totalValue < 0){
         errorHeandel("error-income");
@@ -120,7 +120,7 @@ document.getElementById("income-total").addEventListener("keyup",function(){
 
 /* food error area*/
 document.getElementById("food").addEventListener("keyup",function(){
-    const totalValue = getValue("food");
+    const totalValue = gateToValue("food");
     
     if(totalValue < 0){
         errorHeandel("error-food");
@@ -132,7 +132,7 @@ document.getElementById("food").addEventListener("keyup",function(){
 
 /* rent cost error arror*/
 document.getElementById("rent").addEventListener("keyup",function(){
-    const totalValue = getValue("rent");
+    const totalValue = gateToValue("rent");
     
     if(totalValue < 0){
         errorHeandel("error-rent");
@@ -144,7 +144,7 @@ document.getElementById("rent").addEventListener("keyup",function(){
 
 /* rent cost arror area */
 document.getElementById("cloth").addEventListener("keyup",function(){
-    const totalValue = getValue("cloth");
+    const totalValue = gateToValue("cloth");
     
     if(totalValue < 0){
         errorHeandel("error-cloth");
@@ -156,7 +156,7 @@ document.getElementById("cloth").addEventListener("keyup",function(){
 
 /* rent saving error */
 document.getElementById("saving-input").addEventListener("keyup",function(){
-    const totalValue = getValue("saving-input");
+    const totalValue = gateToValue("saving-input");
     
     if(totalValue < 0){
         errorHeandel("error-save");
